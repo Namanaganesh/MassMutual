@@ -1,0 +1,111 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-11T13:48:27.638Z",
+        "before": [
+          {
+            "result": {
+              "error_message": "java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html\r\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:843)\r\n\tat org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:142)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:36)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:195)\r\n\tat org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:389)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:118)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:139)\r\n\tat com.automatedtest.sample.infrastructure.driver.Setup.setWebDriver(Setup.java:24)\r\n",
+              "duration": 41000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.automatedtest.sample.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Search cucumber studio",
+        "description": "",
+        "id": "search;search-cucumber-studio;;2",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.automatedtest.sample.infrastructure.driver.TearDown.saveScreenshotsForScenario(TearDown.java:28)\r\n\tat com.automatedtest.sample.infrastructure.driver.TearDown.quitDriver(TearDown.java:20)\r\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "com.automatedtest.sample.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "A user navigates to HomePage \"fr\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "fr",
+                  "offset": 30
+                }
+              ],
+              "location": "com.automatedtest.sample.homepage.HomePageSteps.aUserNavigatesToHomePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "a user searches for \"cucumber studio\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cucumber studio",
+                  "offset": 21
+                }
+              ],
+              "location": "com.automatedtest.sample.homepage.HomePageSteps.aUserSearchesFor(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "\"CucumberStudio\" is displayed in the first \"3\" results",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CucumberStudio",
+                  "offset": 1
+                },
+                {
+                  "val": "3",
+                  "offset": 44
+                }
+              ],
+              "location": "com.automatedtest.sample.searchresultpage.SearchResultPageSteps.isDisplayedInTheFirstResults(java.lang.String,int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@search"
+          },
+          {
+            "name": "@search_01"
+          }
+        ]
+      }
+    ],
+    "name": "Search",
+    "description": "",
+    "id": "search",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/automatedtest/sample/Search.feature",
+    "tags": []
+  }
+]
